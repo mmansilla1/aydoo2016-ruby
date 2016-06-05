@@ -1,5 +1,5 @@
 require 'rspec' 
-require_relative '../model/DescomponedorEnFactores'
+require_relative '../model/descomponedor_en_factores'
 
 describe 'DescomponedorEnFactores' do
 

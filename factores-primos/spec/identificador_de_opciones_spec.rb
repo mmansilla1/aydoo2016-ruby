@@ -1,5 +1,5 @@
 require 'rspec' 
-require_relative '../model/IdentificadorDeOpciones'
+require_relative '../model/identificador_de_opciones'
 
 describe 'IdentificadorDeOpciones' do
 
