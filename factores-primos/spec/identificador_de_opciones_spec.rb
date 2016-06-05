@@ -21,4 +21,13 @@ describe 'IdentificadorDeOpciones' do
     expect(identificador_de_opciones.format).to eq "--FORMAT=PRETTY"
   end
 
+  it 'deberia retornar "--SORT:ASC" cuando sort' do
+    argumentos = [0, "--FORMAT=PRETTY", "--SORT:ASC"]
+    identificador_de_opciones = IdentificadorDeOpciones.new(argumentos)
+
+    identificador_de_opciones.identificar_opciones()
+    
+    expect(identificador_de_opciones.sort).to eq "--SORT:ASC"
+  end
+
 end
