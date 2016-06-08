@@ -19,10 +19,10 @@ describe 'Persistidor' do
     
     impresion_esperada = "2\n2\n2\n3\n3\n5 \n"
     path = "salida.txt"
-    persistidor_en_archivo = PersistidorEnArchivo.new(path)
-    persistidor_en_archivo.escribir_factorizacion(impresion_esperada)
+    persistidor = Persistidor.new(path)
+    persistidor.escribir_factorizacion(impresion_esperada)
     
-    impresion_obtenida = persistidor_en_archivo.leer_factorizacion
+    impresion_obtenida = persistidor.leer_factorizacion
     
     expect(impresion_esperada).to eq impresion_obtenida
   end
