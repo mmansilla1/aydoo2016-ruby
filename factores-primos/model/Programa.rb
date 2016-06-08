@@ -22,10 +22,10 @@ class Programa
             if @path == sin_output
                 puts impresion_resultante
             else
-                persistir(impresion_resultante)
+                persistir_en_archivo(impresion_resultante)
             end
         else
-            puts "Debe indicar un numero."
+            puts "Debe indicar al menos un numero."
         end
     end
 
@@ -57,12 +57,12 @@ class Programa
     end 
 
     private
-    def persistir(impresion_a_persistir) 
+    def persistir_en_archivo(impresion_a_persistir) 
 
         posicion_path_real = 14;
         path_real = @path[posicion_path_real, @path.length]
-        persistidor = Persistidor.new(path_real)
-        persistidor.escribir_factorizacion(impresion_a_persistir)
+        persistidor_en_archivo = PersistidorEnArchivo.new(path_real)
+        persistidor_en_archivo.escribir_factorizacion(impresion_a_persistir)
     end 
 
 end
