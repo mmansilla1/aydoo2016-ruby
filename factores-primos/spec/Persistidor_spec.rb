@@ -10,12 +10,12 @@ describe 'Persistidor' do
     persistidor = Persistidor.new(path)
     persistidor.escribir_factorizacion(impresion_esperada)
     
-    impresion_obtenida = persistidor.leer_factorizacion
+    impresion_obtenida = persistidor_en_archivo.leer_factorizacion
     
     expect(impresion_esperada).to eq impresion_obtenida
   end
-  
-    it 'deberia persistir en archivo en varias lineas en el directorio del proyecto cuando escribir_factorizacion' do
+
+  it 'deberia persistir en archivo en varias lineas en el directorio del proyecto cuando escribir_factorizacion' do
     
     impresion_esperada = "2\n2\n2\n3\n3\n5 \n"
     path = "salida.txt"
