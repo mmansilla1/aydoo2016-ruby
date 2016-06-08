@@ -20,8 +20,8 @@ describe 'Integracion' do
 
     expect(impresion_esperada).to eq impresion_resultante  
    end
-   
-     it 'deberia persistir en archivo en directorio del proyecto cuando escribir_factorizacion' do
+
+  it 'deberia persistir en archivo en directorio del proyecto cuando escribir_factorizacion' do
 
     posicion_path_real = 14
     numero_a_factorizar = 360
